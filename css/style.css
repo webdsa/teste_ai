@@ -247,6 +247,7 @@
     font: var(--typeset_0);
     color: var(--text-color);
     background: var(--page-background);
+    padding: 1em;
   }
   
   /* Setup flow spacing for typography elements */
