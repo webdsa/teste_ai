@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bitmovin Player Demo</title>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8" />
+
+  <!-- Bitmovin Player -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
+
+  <style>
+    .player-wrapper {
+      width: 90%;
+      margin: 20px auto;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+<div class="player-wrapper">
+  <div id="player"></div>
+</div>
+
+<script type="text/javascript">
+  var conf = {
+    key: 'b95b25be-3fbf-4d71-87be-8ec7134c18a3',
+    analytics: {
+      key: '8528759d-d9e7-42d8-8a82-c949118f6b05',
+      title: 'Art of Motion',
+      videoId: 'wizard-Art_of_Motion-1722460944395',
+    },
+  };
+
+  var source = {
+    title: 'Art of Motion',
+    hls: 'https://stream.mux.com/e02nZZB6yDN3gTcZC3s9oOSN01tPpp02XtlX83LC2hxB6M.m3u8',
+  };
+
+  var player = new bitmovin.player.Player(document.getElementById('player'), conf);
+  player.load(source);
+</script>
+
+</body>
+</html>
