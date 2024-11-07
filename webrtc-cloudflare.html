@@ -232,7 +232,7 @@
       const remoteTracks = await remoteTracksPromise;
       const remoteVideoElement = document.getElementById('remote-video');
       const remoteStream = new MediaStream();
-      remoteStream.addTrack(remoteTracks[0]);
+      // remoteStream.addTrack(remoteTracks[0]);
       remoteStream.addTrack(remoteTracks[1]);
       remoteVideoElement.srcObject = remoteStream;
     </script>
